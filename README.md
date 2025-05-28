@@ -31,18 +31,18 @@
 Follow the steps below to set up and run the SpendTrack application on your local machine.
 
 ### 1. Clone the Repository
--git clone https://github.com/Gokul-Nishandh/SpendTrack
+- git clone https://github.com/Gokul-Nishandh/SpendTrack
 
 ### 2. Start the frontend
--cd src
--npm install
--npm start
+- cd src
+- npm install
+- npm start
 
 ### 3. Start the Backend
--cd backend
--uvicorn app:app --reload
+- cd backend
+- uvicorn app:app --reload
 
 ### You will see the app running on http://127.0.0.1:8000
 
 ### Database setup :
-Make sure you have MySQL installed and running. Import your database schema and data using the provided .sql file (if any). Update the database connection credentials inside app.py or relevant configuration files.
+- Make sure you have MySQL installed and running. Import your database schema and data using the provided .sql file (if any). Update the database connection credentials inside app.py or relevant configuration files.
