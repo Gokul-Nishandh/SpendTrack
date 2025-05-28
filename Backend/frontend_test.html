@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Login API</title>
+</head>
+<body>
+    <button onclick="test_login()">Test login</button>
+    <button onclick="testsignup()">Test signup</button>
+    
+    <script>
+        function addexpense() {
+            fetch("http://127.0.0.1:8000/grp/add-expense", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    user_id: userId,
+                    grp_id: grpId,
+                    amt: amount,
+                    category: cat,
+                    date: dateofexpense,
+                    mode: modeofpayment
+                })
+            })
+            .then(response => response.json())
+            .then(data => alert(JSON.stringify(data)))  // Shows API response
+            .catch(error => console.error("Error:", error));
+        }
+
+  
+    </script>
+</body>
+</html>

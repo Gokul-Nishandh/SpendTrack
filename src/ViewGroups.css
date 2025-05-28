@@ -1,0 +1,436 @@
+/* ViewGroups.css */
+/* Expense form field container */
+.expense-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Individual field styling */
+.expense-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.expense-form-field label {
+  font-weight: 600;
+  color: #2d3436;
+  font-size: 1rem;
+}
+
+.expense-form-field input,
+.expense-form-field select {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: 2px solid #dfe6e9;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.expense-form-field input:focus,
+.expense-form-field select:focus {
+  border-color: #74b9ff;
+  box-shadow: 0 0 0 3px rgba(116, 185, 255, 0.2);
+  outline: none;
+}
+.viewgroupspage {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #2d3436;
+  background: linear-gradient(135deg, #DF52F5 0%, #8458FF 50%, #6CE4C7 100%);
+  position: relative;
+  top: 80px;
+  width: 102%;
+  margin-left: -10px;;
+  z-index: 1;
+}
+
+.title1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #2d3436;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: #636e72;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.8);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.close:hover {
+  color: #d63031;
+  transform: rotate(90deg);
+}
+
+.Addgroup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem auto;
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
+  position: fixed;
+  top: 120px;
+  left: 50px;
+  z-index: 10;
+}
+
+.Addgroup:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(106, 17, 203, 0.4);
+}
+
+.group-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 100px;
+  padding: 1rem;
+}
+
+.group-item {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.group-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #6a11cb 0%, #2575fc 100%);
+  transition: width 0.3s ease;
+}
+
+.group-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.group-item:hover::before {
+  width: 8px;
+}
+
+.group-item.selected {
+  background-color: #f8f9fa;
+  border-left: 8px solid #2575fc;
+}
+
+.group-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2d3436;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.no-groups {
+  text-align: center;
+  color: #636e72;
+  font-size: 1.1rem;
+  margin-top: 3rem;
+  grid-column: 1 / -1;
+}
+
+.group-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn {
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.btn.cancel {
+  background: linear-gradient(to right, #636e72 0%, #b2bec3 100%);
+}
+
+.btn.cancel:hover {
+  background: linear-gradient(to right, #636e72 0%, #b2bec3 100%);
+}
+
+/* ViewGroups.css - Modal Alignment Fixes */
+
+/* Base modal overlay styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Unified modal content styles */
+.modal-content, 
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+/* Modal animation */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal header styles */
+.modal h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2d3436;
+  font-size: 1.5rem;
+}
+
+/* Form input alignment */
+.modal-content .input-field,
+.modal .input-field {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Expense input grid layout */
+.modal .expense-input-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin: 1rem 0;
+}
+
+.modal .expense-input {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+/* Button container alignment */
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .modal-content,
+  .modal {
+    padding: 1.5rem;
+    width: 95%;
+  }
+  
+  .modal-buttons {
+    flex-direction: column;
+  }
+  
+  .modal .expense-input {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+.modal-content h2, .modal h2 {
+  color: #2d3436;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin: 0.8rem 0;
+  border-radius: 10px;
+  border: 1px solid #dfe6e9;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #74b9ff;
+  box-shadow: 0 0 0 3px rgba(116, 185, 255, 0.2);
+  outline: none;
+}
+
+.expense-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 0.8rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.expense-input span {
+  font-weight: 500;
+  color: #2d3436;
+}
+
+.expense-input input {
+  width: 120px;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #dfe6e9;
+  transition: all 0.3s ease;
+}
+
+.expense-input input:focus {
+  border-color: #74b9ff;
+  box-shadow: 0 0 0 3px rgba(116, 185, 255, 0.2);
+}
+
+.friend-list {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 1.5rem 0;
+  padding-right: 0.5rem;
+}
+
+.friend-checkbox {
+  margin: 0.8rem 0;
+  padding: 0.8rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.friend-checkbox:hover {
+  background: #e8f4fc;
+}
+
+.friend-checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+  color: #2d3436;
+  cursor: pointer;
+}
+
+.friend-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #2575fc;
+  cursor: pointer;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title1 {
+    font-size: 2rem;
+    top: 80px;
+  }
+  
+  .Addgroup {
+    left: 20px;
+    top: 100px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .group-list {
+    grid-template-columns: 1fr;
+    margin-top: 80px;
+  }
+}

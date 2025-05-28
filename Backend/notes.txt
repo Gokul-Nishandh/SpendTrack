@@ -1,0 +1,16 @@
+
+/friends : sample output
+
+    [
+        {
+            'friend_name': 'Prashanth', 
+            'friend_id': 5
+            }, 
+        {
+            'friend_name': 'Kirthic Adhithya J', 
+            'friend_id': 6
+            }
+    ]
+
+
+/grp/add-friends
